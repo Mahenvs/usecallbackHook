@@ -1,14 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
+  padding: 2rem;
   text-align: center;
   height: 100vh; /* Set height to 100vh */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  overflow: hidden; 
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,9 +15,20 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-li{
+
+li {
   list-style: none;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.log {
+  /* display: flex;
+  flex-direction: column; */
+}
+
 .card {
   padding: 0.5em;
   margin: 0.5em 0;
@@ -36,23 +46,90 @@ li{
   color: #888;
 }
 
- .showVal{
+.showVal {
   display: inline-block;
   margin-left: 1em;
   margin-right: 1em;
   font-size: large;
   font-weight: 600;
-  color:#61dafbaa;
+  color: #61dafbaa;
   transition: transform 0.3s ease-in-out;
 }
 
-.showVal:hover{
+.showVal:hover {
   transform: scale(1.2);
 }
 
-.dataList{
+.dataList {
   padding-left: 2em;
   max-height: 500px;
   min-height: 500px;
   overflow-y: auto;
+}
+
+/* Layout container to align Parent and Logger */
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10rem; /* Space between Parent and Logger */
+  
+}
+
+/* Parent container takes 60% of the space */
+.parent {
+  width: 60%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Logger container takes 40% of the space */
+.logger {
+  width: 40%;
+  max-height: 300px;
+  min-height: 200px;
+  overflow-y: auto;
+  background-color: #274141;
+  padding: 1rem;
+  min-width: 400px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  color: white;
+}
+
+.logger h3 {
+  margin-bottom: 1rem;
+}
+
+.logger ul {
+  list-style: none;
+  padding: 0;
+}
+
+.logger li {
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* Stack on smaller screens */
+    gap: 0.5rem;
+    align-items: center; /* Center items horizontally */
+  }
+
+  .parent,
+  .logger {
+    width: 100%; /* Full width on smaller screens */
+    min-width: unset; /* Remove min-width constraint */
+  }
+
+  .logger {
+    max-height: unset; /* Remove max-height constraint */
+  }
+}
+
+button {
+  padding: 0.2em 0.8em;
 }

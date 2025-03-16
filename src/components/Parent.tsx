@@ -8,7 +8,7 @@ const Parent = () => {
     setNumber((prev) => prev + 1); // Increment number
   };
   const decrementHandler = () => {
-    setNumber((prev) => prev + 1); // Increment number
+    setNumber((prev) => prev - 1); // Increment number
   };
 
   return (

@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  height: 100vh; /* Set height to 100vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  overflow: hidden; 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+li{
+  list-style: none;
+}
+.card {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #61dafbaa;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ .showVal{
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: large;
+  font-weight: 600;
+  color:#61dafbaa;
+  transition: transform 0.3s ease-in-out;
+}
+
+.showVal:hover{
+  transform: scale(1.2);
+}
+
+.dataList{
+  padding-left: 2em;
+  max-height: 500px;
+  min-height: 500px;
+  overflow-y: auto;
+}

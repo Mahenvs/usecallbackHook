@@ -34,7 +34,7 @@ li {
   margin: 0.5em 0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #61dafbaa;
+  background-color: #274141;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -52,7 +52,7 @@ li {
   margin-right: 1em;
   font-size: large;
   font-weight: 600;
-  color: #274141;
+  color: #61dafbaa;
   transition: transform 0.3s ease-in-out;
 }
 

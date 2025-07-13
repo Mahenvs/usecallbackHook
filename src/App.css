@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden; /* Prevent overflow */
+  align-items: center;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,15 +20,12 @@
 
 li {
   list-style: none;
+  align-self: self-start;
+  text-align: left;
 }
 
 .absolute {
   position: absolute;
-}
-
-.log {
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .card {
@@ -41,11 +40,6 @@ li {
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.read-the-docs {
-  color: #888;
-}
-
 .showVal {
   display: inline-block;
   margin-left: 1em;
@@ -59,42 +53,34 @@ li {
 .showVal:hover {
   transform: scale(1.2);
 }
-
 .dataList {
   padding-left: 2em;
-  max-height: 500px;
-  min-height: 500px;
+  max-height: 50vh;
   overflow-y: auto;
 }
 
-/* Layout container to align Parent and Logger */
 .layout {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 10rem; /* Space between Parent and Logger */
-  
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-/* Parent container takes 60% of the space */
 .parent {
-  width: 60%;
-  padding: 1rem;
+  flex: 1;
   border-radius: 8px;
+  min-width: 0;
 }
 
-/* Logger container takes 40% of the space */
 .logger {
-  width: 40%;
-  max-height: 300px;
-  min-height: 200px;
+  flex: 1;
   overflow-y: auto;
   background-color: #274141;
   padding: 1rem;
-  min-width: 400px;
   border: 1px solid #aaa;
   border-radius: 8px;
   color: white;
+  min-width: 80px; /* allow shrinking */
 }
 
 .logger h3 {
@@ -111,25 +97,3 @@ li {
   font-family: monospace;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column; /* Stack on smaller screens */
-    gap: 0.5rem;
-    align-items: center; /* Center items horizontally */
-  }
-
-  .parent,
-  .logger {
-    width: 100%; /* Full width on smaller screens */
-    min-width: unset; /* Remove min-width constraint */
-  }
-
-  .logger {
-    max-height: unset; /* Remove max-height constraint */
-  }
-}
-
-button {
-  padding: 0.2em 0.8em;
-}

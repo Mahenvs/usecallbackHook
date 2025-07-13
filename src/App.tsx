@@ -6,7 +6,7 @@ import { LoggerProvider } from "./contexts/LoggerContext";
 function App() {
   return (
     <LoggerProvider>
-      <div className="layout">
+      <div className="layout container">
         <Parent />
         <Logger />
       </div>

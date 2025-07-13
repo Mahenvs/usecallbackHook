@@ -29,9 +29,11 @@ const Child = ({ number }: { number: number }) => {
 
   return (
     <div>
-      <button onClick={fetchData}>Fetch Data</button>
+      <button className="btn" onClick={fetchData}>
+        Fetch Data
+      </button>
       <h3>Fetched Data:</h3>
-      <ul className="dataList">
+      <ul className="dataList  ">
         {data.length === 0 ? (
           <h2>No data found!</h2>
         ) : (

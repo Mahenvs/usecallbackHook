@@ -16,12 +16,21 @@ const Logger = () => {
 
   return (
     <div className="log">
-      <h3>
-        Logs{" "}
-        <button style={{ marginLeft: "10px" }} onClick={() => resetLog()}>
-          Clear
-        </button>
-      </h3>
+      <div className="parent">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "1em",
+          }}
+          className="mobileLogs"
+        >
+          <h3>Logs</h3>
+          <button className="clearBtn" onClick={() => resetLog()}>
+            Clear
+          </button>
+        </div>
+      </div>
       <div className="logger" style={{ maxHeight: "300px", overflowY: "auto" }}>
         <ul>
           {logs.map((log: string, index: number) => (

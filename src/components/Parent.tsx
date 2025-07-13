@@ -21,9 +21,16 @@ const Parent = () => {
 
   return (
     <div className="parent">
-      <button onClick={incrementHandler}>Increment</button>
+      <div style={{ display: "flex", gap: "1em", marginTop: "1px" }}>
+        <button className="btn" onClick={incrementHandler}>
+          Increment
+        </button>
+        <button className="btn" onClick={decrementHandler}>
+          Decrement
+        </button>{" "}
+      </div>
+
       <span className="showVal">Value: {number}</span>
-      <button onClick={decrementHandler}>Decrement</button>{" "}
       <Child number={number} />
     </div>
   );

@@ -21,7 +21,7 @@ const Parent = () => {
 
   return (
     <div className="parent">
-      <div style={{ display: "flex", gap: "1em", marginTop: "1px" }}>
+      <div style={{ display: "flex", flexDirection: "row", gap: "0.6em" }}>
         <button className="btn" onClick={incrementHandler}>
           Increment
         </button>

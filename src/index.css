@@ -1,4 +1,6 @@
-:root {
+* {
+  box-sizing: border-box;
+}:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -59,7 +61,7 @@ button:hover {
 }
 .clearBtn {
   width: max-content;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border: 1px solid red;
   transition: all 0.3s ease;
 }
@@ -131,13 +133,13 @@ button:hover {
   }
 }
 
-.container {
+/* .container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
-}
+} */
 @media (max-width: 768px) {
   html,
   body {
@@ -165,14 +167,14 @@ button:hover {
   }
 
   .parent {
-    width: 100%;
+    width: 90%;
     padding: 0;
-    
+    overflow-x: hidden;
     overflow-y: auto
   }
   .dataList {
     height: 40%;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .buttonGroup {
@@ -189,17 +191,11 @@ button:hover {
     padding: 0.5rem;
     min-width: 390px; 
   }
-
-  .parent {
-    min-width: 0;
-  }
-
   button {
     flex: 1;
     margin: 0.3rem;
     max-width: unset;
   }
-
   .showVal {
     display: block;
     text-align: center;

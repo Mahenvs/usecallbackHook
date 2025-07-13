@@ -26,7 +26,7 @@ const Logger = () => {
         className="mobileLogs"
       >
         <h3>Logs</h3>
-        <button className="clearBtn" onClick={() => resetLog()}>
+        <button className="btn clearBtn" onClick={() => resetLog()}>
           Clear
         </button>
       </div>

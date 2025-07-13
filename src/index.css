@@ -54,9 +54,12 @@ body {
     height: 50vh;            /* Each takes half the screen height */
     width: 100%;
   }
+  .clearBtn{
+    border: none !important;
+  }
 }
 .log {
-  
+  margin-bottom: 0.5rem;
   justify-content: flex-start;
   align-items: stretch;
 }
@@ -151,8 +154,10 @@ body {
 .clearBtn {
   background-color: transparent;
   color: red;
-  border: 1px solid red;
-  border-radius: 6px;
+  /* border: 1px solid red;
+  border-radius: 6px; */
+  border: none;
+  padding:0.1rem 1rem !important;
   cursor: pointer;
   transition: 0.2s;
 }
